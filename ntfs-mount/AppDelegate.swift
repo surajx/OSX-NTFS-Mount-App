@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             //LABEL=<ntfs_volume_label> none ntfs rw,auto,nobrowse
             var fstab_entry = "LABEL=" + txtNTFSLabelName.stringValue + " none ntfs rw,auto,nobrowse"
             execBash("echo '"+fstab_entry+"' >> "+fstab_path, isAdmin:true)
-            showPopup("Success!", infoMsg: "The NTFS drive with label "+txtNTFSLabelName.stringValue+" has been mounted, click on Open Volumes button to navigate to your drive.")
+            showPopup("Success!", infoMsg: "The NTFS drive with label "+txtNTFSLabelName.stringValue+" has been mounted with write permission. Un-mount and re-insert your drive, then click on Open Volumes button to navigate to your drive's mount point.")
         }  else {
             showPopup("Error!", infoMsg: "The NTFS drive with label "+txtNTFSLabelName.stringValue+" has already been mounted, if its plugged in just open /Volumes in Finder to access your drive.")
         }
