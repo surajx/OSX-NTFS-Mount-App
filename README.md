@@ -1,2 +1,2 @@
-# OSX-NTFS-Mount-App
-Application for mounting NTFS drives with write mode.
+# OSX NTFS Mount App
+Application for mounting NTFS drives with write mode enabled.
