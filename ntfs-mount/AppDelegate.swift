@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func btnMount(sender: AnyObject) {
-        let fstab_path = "/etc/fstab_fake"
+        let fstab_path = "/etc/fstab"
         if txtNTFSLabelName.stringValue.isEmpty || txtNTFSLabelName.stringValue.utf16Count>20{
             showPopup("Error!", infoMsg: "Length of Label Name should lie between (0,20]")
             return
