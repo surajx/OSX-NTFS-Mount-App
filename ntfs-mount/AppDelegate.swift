@@ -48,6 +48,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func btnMount(sender: AnyObject) {
         let fstab_path = "/etc/fstab"
+        var fileManager = NSFileManager.defaultManager()
+        if !fileManager.fileExistsAtPath(fstab_path){
+            execBash("touch " + fstab_path, isAdmin:true)
+        }
         if txtNTFSLabelName.stringValue.isEmpty || txtNTFSLabelName.stringValue.utf16Count>20{
             showPopup("Error!", infoMsg: "Length of Label Name should lie between (0,20]")
             return
